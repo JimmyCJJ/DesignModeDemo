@@ -20,6 +20,8 @@ func main() {
     stratery1()
     // 需求5：设计一个广告栏，支持n种广告的定制，并且可以通过设置优先级来决定最后显示哪个广告
     stratery2()
+    // 需求6：创建一个全局唯一的音乐播放器管理对象，负责播放音乐、暂停音乐等逻辑处理
+    singleton()
 }
 
 func getOptionString(_ optional: Optional<Any>) -> String {
@@ -72,4 +74,21 @@ func stratery1() {
 func stratery2() {
     let comparetor: Comparetor? = strateryController().request()
     comparetor?.compare()
+}
+
+// 单例模式
+// 定义：创建一个唯一的对象，该对象可以在整个应用程序的生命周期中一直存活
+// 优点：减少对象创建销毁的消耗，更方便地管理一些全局使用的状态值或者功能，利于数据共享和数据传递
+// 缺点：由于全局共享单例对象的一些状态，某个地方修改不当容易引起bug；单例对象如果太大也会一直占用内存
+func singleton() {
+    MusicSingleton.sharedSingleton.printNum()
+    MusicSingleton.sharedSingleton.musicNum = 99
+    MusicSingleton.sharedSingleton.printNum()
+    
+    MusicSingleton.sharedSingleton.play()
+    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+3.0) {
+        MusicSingleton.sharedSingleton.pause()
+    }
+    // 由于demo使用Command Line Tool程序 主线程没有RunLoop 所以加上 RunLoop.current.run() 在iOS程序开发中不用添加
+    RunLoop.current.run()
 }
