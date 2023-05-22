@@ -10,18 +10,20 @@ import Foundation
 main()
 
 func main() {
-    // 需求1：拿到某个数据库的用户表
-    simpleFactory()
-    // 需求2：解耦负责生成用户表对象的方法
-    factoryMethod()
-    // 需求3：支持拿到用户表和登录表
-    abstractFactory()
-    // 需求4：商场里面经常举办活动，实现一个类，支持切换不同的折扣策略
-    stratery1()
-    // 需求5：设计一个广告栏，支持n种广告的定制，并且可以通过设置优先级来决定最后显示哪个广告
-    stratery2()
-    // 需求6：创建一个全局唯一的音乐播放器管理对象，负责播放音乐、暂停音乐等逻辑处理
-    singleton()
+    // 需求：拿到某个数据库的用户表
+//    simpleFactory()
+    // 需求：解耦负责生成用户表对象的方法
+//    factoryMethod()
+    // 需求：支持拿到用户表和登录表
+//    abstractFactory()
+    // 需求：商场里面经常举办活动，实现一个类，支持切换不同的折扣策略
+//    stratery1()
+    // 需求：设计一个广告栏，支持n种广告的定制，并且可以通过设置优先级来决定最后显示哪个广告
+//    stratery2()
+    // 需求：创建一个全局唯一的音乐播放器管理对象，负责播放音乐、暂停音乐等逻辑处理
+//    singleton()
+    // 需求：封装一个控件，可以设置长宽高等属性
+    Builder()
 }
 
 func getOptionString(_ optional: Optional<Any>) -> String {
@@ -91,4 +93,17 @@ func singleton() {
     }
     // 由于demo使用Command Line Tool程序 主线程没有RunLoop 所以加上 RunLoop.current.run() 在iOS程序开发中不用添加
     RunLoop.current.run()
+}
+
+// 建造者模式
+// 定义：将一个复杂对象的构建与其表示分离，使得同样的构建过程可以创建不同的表示
+// 优点：不用关心对象创建的过程，只需要传入想要构建的参数即可，一旦构建后就不允许再修改参数，避免不必要的变动；符合面向对象的封装原则，使构建过程和最终表示完全分离
+// 缺点：如果需要构建的对象需要大改版，我们就要修改很多内部代码，并且构建的对象是按一定的模板去设计，灵活性不是很高
+func Builder() {
+    let builder = ViewBuilder()
+    builder.length = 100
+    builder.width = 200
+    builder.height = 300
+    let view = View.init(builder)
+    view.show()
 }

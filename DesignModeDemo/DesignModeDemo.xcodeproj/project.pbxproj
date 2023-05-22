@@ -11,6 +11,7 @@
 		BF818A4E2A1A771900FBA71C /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF818A4D2A1A771900FBA71C /* Factory.swift */; };
 		BF818A522A1B366900FBA71C /* Stratery.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF818A512A1B366900FBA71C /* Stratery.swift */; };
 		BF818A6C2A1BB19C00FBA71C /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF818A6B2A1BB19C00FBA71C /* Singleton.swift */; };
+		BF818A6E2A1BC1A900FBA71C /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF818A6D2A1BC1A900FBA71C /* Builder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +33,7 @@
 		BF818A512A1B366900FBA71C /* Stratery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stratery.swift; sourceTree = "<group>"; };
 		BF818A542A1BAF2400FBA71C /* ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
 		BF818A6B2A1BB19C00FBA71C /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		BF818A6D2A1BC1A900FBA71C /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 		BF818A582A1BAF7300FBA71C /* 建造者模式 */ = {
 			isa = PBXGroup;
 			children = (
+				BF818A6D2A1BC1A900FBA71C /* Builder.swift */,
 			);
 			path = "建造者模式";
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				BF818A6C2A1BB19C00FBA71C /* Singleton.swift in Sources */,
 				BF818A4E2A1A771900FBA71C /* Factory.swift in Sources */,
 				BF818A462A1A76EF00FBA71C /* main.swift in Sources */,
+				BF818A6E2A1BC1A900FBA71C /* Builder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
