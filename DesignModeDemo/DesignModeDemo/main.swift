@@ -16,6 +16,7 @@ func main() {
     factoryMethod()
     // 需求3：支持拿到用户表和登录表
     abstractFactory()
+    stratery()
 }
 
 func getOptionString(_ optional: Optional<Any>) -> String {
@@ -36,7 +37,7 @@ func factoryMethod() {
     // 工厂方法模式
     // 定义：是对简单工厂模式的一次改良，简单工厂模式中所有产品类的创建都耦合在同一个方法里面，不符合开闭原则；工厂方法中不同的产品类都对应相应的工厂类。
     // 优点：拓展性更好，新增一个产品类不会影响到原有的代码设计，减少影响面，符合开闭原则
-    // 缺点：由于每新增一个产品类就要对应新增一个具体工厂类，提升了结构设计的复杂度和冗余程度；对于客户端来说，需要依赖具体工厂
+    // 缺点：由于每新增一个产品类就要对应新增一个具体工厂类，提升了结构设计的复杂度和冗余程度；对于客户端来说，需要依赖具体工厂，判断实例化哪一个对象的逻辑下方到了客户端
     let sqlUserTable: Table? = MysqlFactory().createUser()
     let oracleUserTable: Table? = OracleFactory().createUser()
     print("工厂方法模式：" + "\nsqlUserTable=\(getOptionString(sqlUserTable))" + "\noracleUserTable=\(getOptionString(oracleUserTable))");
@@ -45,11 +46,16 @@ func factoryMethod() {
 func abstractFactory() {
     // 抽象工厂模式
     // 定义：是对工厂方法模式的一次扩展，工厂方法模式中一个工厂类只对应一种产品，但在某些业务场景中需要对应多种产品，这就需要用到抽象工厂模式
-    // 优点：拓展性最好，能生成更多的产品类
+    // 优点：拓展性最好，更加灵活
     // 缺点: 复杂性更高
     let sqlUserTable: Table? = MysqlFactory().createUser()
     let oracleUserTable: Table? = OracleFactory().createUser()
     let sqlLoginTable: Table? = MysqlFactory().createLogin()
     let oracleLoginTable: Table? = OracleFactory().createLogin()
     print("抽象工厂模式：" + "\nsqlUserTable=\(getOptionString(sqlUserTable))" + "\noracleUserTable=\(getOptionString(oracleUserTable))" + "\nsqlLoginTable=\(getOptionString(sqlLoginTable))" + "\noracleLoginTable=\(getOptionString(oracleLoginTable))");
+}
+
+func stratery() {
+    let comparetor: Comparetor? = strateryController().request()
+    comparetor?.compare()
 }

@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BF818A462A1A76EF00FBA71C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF818A452A1A76EF00FBA71C /* main.swift */; };
-		BF818A4E2A1A771900FBA71C /* FactoryMethodAndSimpleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF818A4D2A1A771900FBA71C /* FactoryMethodAndSimpleFactory.swift */; };
+		BF818A4E2A1A771900FBA71C /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF818A4D2A1A771900FBA71C /* Factory.swift */; };
+		BF818A522A1B366900FBA71C /* Stratery.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF818A512A1B366900FBA71C /* Stratery.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,7 +27,8 @@
 /* Begin PBXFileReference section */
 		BF818A422A1A76EF00FBA71C /* DesignModeDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DesignModeDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF818A452A1A76EF00FBA71C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		BF818A4D2A1A771900FBA71C /* FactoryMethodAndSimpleFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactoryMethodAndSimpleFactory.swift; sourceTree = "<group>"; };
+		BF818A4D2A1A771900FBA71C /* Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		BF818A512A1B366900FBA71C /* Stratery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stratery.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,18 +61,35 @@
 		BF818A442A1A76EF00FBA71C /* DesignModeDemo */ = {
 			isa = PBXGroup;
 			children = (
+				BF818A4F2A1B362200FBA71C /* 创建型 */,
 				BF818A452A1A76EF00FBA71C /* main.swift */,
-				BF818A4C2A1A771900FBA71C /* 1、工厂方法与简单工厂与抽象工厂 */,
 			);
 			path = DesignModeDemo;
 			sourceTree = "<group>";
 		};
-		BF818A4C2A1A771900FBA71C /* 1、工厂方法与简单工厂与抽象工厂 */ = {
+		BF818A4C2A1A771900FBA71C /* 工厂方法与简单工厂与抽象工厂模式 */ = {
 			isa = PBXGroup;
 			children = (
-				BF818A4D2A1A771900FBA71C /* FactoryMethodAndSimpleFactory.swift */,
+				BF818A4D2A1A771900FBA71C /* Factory.swift */,
 			);
-			path = "1、工厂方法与简单工厂与抽象工厂";
+			path = "工厂方法与简单工厂与抽象工厂模式";
+			sourceTree = "<group>";
+		};
+		BF818A4F2A1B362200FBA71C /* 创建型 */ = {
+			isa = PBXGroup;
+			children = (
+				BF818A502A1B362D00FBA71C /* 策略模式 */,
+				BF818A4C2A1A771900FBA71C /* 工厂方法与简单工厂与抽象工厂模式 */,
+			);
+			path = "创建型";
+			sourceTree = "<group>";
+		};
+		BF818A502A1B362D00FBA71C /* 策略模式 */ = {
+			isa = PBXGroup;
+			children = (
+				BF818A512A1B366900FBA71C /* Stratery.swift */,
+			);
+			path = "策略模式";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,7 +150,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF818A4E2A1A771900FBA71C /* FactoryMethodAndSimpleFactory.swift in Sources */,
+				BF818A522A1B366900FBA71C /* Stratery.swift in Sources */,
+				BF818A4E2A1A771900FBA71C /* Factory.swift in Sources */,
 				BF818A462A1A76EF00FBA71C /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
