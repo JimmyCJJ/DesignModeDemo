@@ -29,6 +29,7 @@
 		BF818A452A1A76EF00FBA71C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		BF818A4D2A1A771900FBA71C /* Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		BF818A512A1B366900FBA71C /* Stratery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stratery.swift; sourceTree = "<group>"; };
+		BF818A542A1BAF2400FBA71C /* ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +63,10 @@
 			isa = PBXGroup;
 			children = (
 				BF818A4F2A1B362200FBA71C /* 创建型 */,
+				BF818A552A1BAF4A00FBA71C /* 结构型 */,
+				BF818A562A1BAF5500FBA71C /* 行为型 */,
 				BF818A452A1A76EF00FBA71C /* main.swift */,
+				BF818A542A1BAF2400FBA71C /* ReadMe.md */,
 			);
 			path = DesignModeDemo;
 			sourceTree = "<group>";
@@ -78,8 +82,10 @@
 		BF818A4F2A1B362200FBA71C /* 创建型 */ = {
 			isa = PBXGroup;
 			children = (
-				BF818A502A1B362D00FBA71C /* 策略模式 */,
 				BF818A4C2A1A771900FBA71C /* 工厂方法与简单工厂与抽象工厂模式 */,
+				BF818A572A1BAF6300FBA71C /* 单例模式 */,
+				BF818A582A1BAF7300FBA71C /* 建造者模式 */,
+				BF818A592A1BAF7A00FBA71C /* 原型模式 */,
 			);
 			path = "创建型";
 			sourceTree = "<group>";
@@ -90,6 +96,178 @@
 				BF818A512A1B366900FBA71C /* Stratery.swift */,
 			);
 			path = "策略模式";
+			sourceTree = "<group>";
+		};
+		BF818A552A1BAF4A00FBA71C /* 结构型 */ = {
+			isa = PBXGroup;
+			children = (
+				BF818A5A2A1BAF7F00FBA71C /* 适配器模式 */,
+				BF818A5B2A1BAF8400FBA71C /* 装饰器模式 */,
+				BF818A5C2A1BAF8900FBA71C /* 代理模式 */,
+				BF818A5D2A1BAF8E00FBA71C /* 外观模式 */,
+				BF818A5E2A1BAF9300FBA71C /* 桥接模式 */,
+				BF818A5F2A1BAF9800FBA71C /* 组合模式 */,
+				BF818A602A1BAF9D00FBA71C /* 享元模式 */,
+			);
+			path = "结构型";
+			sourceTree = "<group>";
+		};
+		BF818A562A1BAF5500FBA71C /* 行为型 */ = {
+			isa = PBXGroup;
+			children = (
+				BF818A502A1B362D00FBA71C /* 策略模式 */,
+				BF818A6A2A1BB00900FBA71C /* 模板方法模式 */,
+				BF818A692A1BB00400FBA71C /* 观察者模式 */,
+				BF818A682A1BAFFE00FBA71C /* 迭代子模式 */,
+				BF818A672A1BAFF800FBA71C /* 责任链模式 */,
+				BF818A662A1BAFF300FBA71C /* 命令模式 */,
+				BF818A652A1BAFEE00FBA71C /* 备忘录模式 */,
+				BF818A642A1BAFE900FBA71C /* 状态模式 */,
+				BF818A632A1BAFE400FBA71C /* 访问者模式 */,
+				BF818A622A1BAFDB00FBA71C /* 中介者模式 */,
+				BF818A612A1BAFD200FBA71C /* 解释器模式 */,
+			);
+			path = "行为型";
+			sourceTree = "<group>";
+		};
+		BF818A572A1BAF6300FBA71C /* 单例模式 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "单例模式";
+			sourceTree = "<group>";
+		};
+		BF818A582A1BAF7300FBA71C /* 建造者模式 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "建造者模式";
+			sourceTree = "<group>";
+		};
+		BF818A592A1BAF7A00FBA71C /* 原型模式 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "原型模式";
+			sourceTree = "<group>";
+		};
+		BF818A5A2A1BAF7F00FBA71C /* 适配器模式 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "适配器模式";
+			sourceTree = "<group>";
+		};
+		BF818A5B2A1BAF8400FBA71C /* 装饰器模式 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "装饰器模式";
+			sourceTree = "<group>";
+		};
+		BF818A5C2A1BAF8900FBA71C /* 代理模式 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "代理模式";
+			sourceTree = "<group>";
+		};
+		BF818A5D2A1BAF8E00FBA71C /* 外观模式 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "外观模式";
+			sourceTree = "<group>";
+		};
+		BF818A5E2A1BAF9300FBA71C /* 桥接模式 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "桥接模式";
+			sourceTree = "<group>";
+		};
+		BF818A5F2A1BAF9800FBA71C /* 组合模式 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "组合模式";
+			sourceTree = "<group>";
+		};
+		BF818A602A1BAF9D00FBA71C /* 享元模式 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "享元模式";
+			sourceTree = "<group>";
+		};
+		BF818A612A1BAFD200FBA71C /* 解释器模式 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "解释器模式";
+			sourceTree = "<group>";
+		};
+		BF818A622A1BAFDB00FBA71C /* 中介者模式 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "中介者模式";
+			sourceTree = "<group>";
+		};
+		BF818A632A1BAFE400FBA71C /* 访问者模式 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "访问者模式";
+			sourceTree = "<group>";
+		};
+		BF818A642A1BAFE900FBA71C /* 状态模式 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "状态模式";
+			sourceTree = "<group>";
+		};
+		BF818A652A1BAFEE00FBA71C /* 备忘录模式 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "备忘录模式";
+			sourceTree = "<group>";
+		};
+		BF818A662A1BAFF300FBA71C /* 命令模式 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "命令模式";
+			sourceTree = "<group>";
+		};
+		BF818A672A1BAFF800FBA71C /* 责任链模式 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "责任链模式";
+			sourceTree = "<group>";
+		};
+		BF818A682A1BAFFE00FBA71C /* 迭代子模式 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "迭代子模式";
+			sourceTree = "<group>";
+		};
+		BF818A692A1BB00400FBA71C /* 观察者模式 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "观察者模式";
+			sourceTree = "<group>";
+		};
+		BF818A6A2A1BB00900FBA71C /* 模板方法模式 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "模板方法模式";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
