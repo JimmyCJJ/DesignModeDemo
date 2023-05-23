@@ -29,7 +29,9 @@ func main() {
     // 需求：设计一个适配器，兼容新的接口
 //    adapterMode()
     // 需求：给一个类扩展新的功能
-    decoratorMode()
+//    decoratorMode()
+    // 需求：把事件代理出去
+    delegateMode()
 }
 
 func getOptionString(_ optional: Optional<Any>) -> String {
@@ -164,4 +166,12 @@ func decoratorMode() {
     let strongMan = ManDecorator(man: Man())
     strongMan.run()
     strongMan.fly()
+}
+
+// 代理模式
+// 定义：
+// 优点：
+// 缺点：
+func delegateMode() {
+    
 }

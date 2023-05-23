@@ -11,6 +11,7 @@
 		841D3E302A1C55EF0058BFD2 /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D3E2F2A1C55EF0058BFD2 /* Tool.swift */; };
 		841D3E322A1C5A700058BFD2 /* Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D3E312A1C5A700058BFD2 /* Adapter.swift */; };
 		841D3E342A1C62770058BFD2 /* Decorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D3E332A1C62770058BFD2 /* Decorator.swift */; };
+		841D3E362A1C67340058BFD2 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D3E352A1C67340058BFD2 /* Delegate.swift */; };
 		BF818A462A1A76EF00FBA71C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF818A452A1A76EF00FBA71C /* main.swift */; };
 		BF818A4E2A1A771900FBA71C /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF818A4D2A1A771900FBA71C /* Factory.swift */; };
 		BF818A522A1B366900FBA71C /* Stratery.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF818A512A1B366900FBA71C /* Stratery.swift */; };
@@ -35,6 +36,7 @@
 		841D3E2F2A1C55EF0058BFD2 /* Tool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tool.swift; sourceTree = "<group>"; };
 		841D3E312A1C5A700058BFD2 /* Adapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adapter.swift; sourceTree = "<group>"; };
 		841D3E332A1C62770058BFD2 /* Decorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decorator.swift; sourceTree = "<group>"; };
+		841D3E352A1C67340058BFD2 /* Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
 		BF818A422A1A76EF00FBA71C /* DesignModeDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DesignModeDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF818A452A1A76EF00FBA71C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		BF818A4D2A1A771900FBA71C /* Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 		841D3E212A1C4DFC0058BFD2 /* 代理模式 */ = {
 			isa = PBXGroup;
 			children = (
+				841D3E352A1C67340058BFD2 /* Delegate.swift */,
 			);
 			path = "代理模式";
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				BF818A4E2A1A771900FBA71C /* Factory.swift in Sources */,
 				841D3E302A1C55EF0058BFD2 /* Tool.swift in Sources */,
 				841D3E342A1C62770058BFD2 /* Decorator.swift in Sources */,
+				841D3E362A1C67340058BFD2 /* Delegate.swift in Sources */,
 				BF818A462A1A76EF00FBA71C /* main.swift in Sources */,
 				BF818A6E2A1BC1A900FBA71C /* Builder.swift in Sources */,
 				841D3E1B2A1C4D770058BFD2 /* Clone.swift in Sources */,
