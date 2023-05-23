@@ -23,7 +23,9 @@ func main() {
     // 需求：创建一个全局唯一的音乐播放器管理对象，负责播放音乐、暂停音乐等逻辑处理
 //    singleton()
     // 需求：封装一个控件，可以设置长宽高等属性
-    Builder()
+//    builder()
+    // 需求：克隆一个对象，浅克隆/深克隆
+    clone()
 }
 
 func getOptionString(_ optional: Optional<Any>) -> String {
@@ -99,11 +101,39 @@ func singleton() {
 // 定义：将一个复杂对象的构建与其表示分离，使得同样的构建过程可以创建不同的表示
 // 优点：不用关心对象创建的过程，只需要传入想要构建的参数即可，一旦构建后就不允许再修改参数，避免不必要的变动；符合面向对象的封装原则，使构建过程和最终表示完全分离
 // 缺点：如果需要构建的对象需要大改版，我们就要修改很多内部代码，并且构建的对象是按一定的模板去设计，灵活性不是很高
-func Builder() {
+func builder() {
     let builder = ViewBuilder()
     builder.length = 100
     builder.width = 200
     builder.height = 300
     let view = View.init(builder)
     view.show()
+}
+
+// 原型模式
+// 定义：克隆一个对象，分为浅克隆和深克隆两种形式
+// 优点：有时候我们想要构建一个一模一样的对象，但是在外部去实现是很困难的，特别是这个对象有一些私有变量时，访问不了，这时候就可以让该对象实现克隆接口，并提供给外部调用
+// 缺点：支持克隆的类由于需要实现克隆接口，所有要修改内部代码，违反了开-闭原则；特别是实现深克隆的时候，由于嵌套层级比较多，每一个需要深克隆的对象都要去实现克隆接口，复杂性会更高
+func clone() {
+    let person = Person(age: 27, weight: 140, son: Person(age: 3, weight: 10, son: nil))
+    print("father:")
+    printSelf(person)
+    print("son:")
+    printSelf(person.son)
+    
+    // 浅克隆
+    let copyObject = person.copy() as! Person
+    print("————————浅克隆————————")
+    print("father:")
+    printSelf(copyObject)
+    print("son:")
+    printSelf(copyObject.son)
+    
+    // 深克隆
+    let mutableCopyObject = person.multableCopy() as! Person
+    print("————————深克隆————————")
+    print("father:")
+    printSelf(mutableCopyObject)
+    print("son:")
+    printSelf(mutableCopyObject.son)
 }

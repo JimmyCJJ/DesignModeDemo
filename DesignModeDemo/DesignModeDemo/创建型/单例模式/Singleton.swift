@@ -49,24 +49,20 @@ class MusicSingleton {
     var musicNum = 1
     var isPlaying = false
     func printNum() {
-        print("print--\(musicNum)-\(printSelf())")
+        print("print--\(musicNum)-\(printSelf(self))")
     }
     func play() {
-        print("开始播放\(printSelf())")
+        print("开始播放\(printSelf(self))")
         isPlaying = true
         DispatchQueue.global(qos: .background).async {
             while self.isPlaying {
-                print("正在播放\(self.printSelf())")
+                print("正在播放\(printSelf(self))")
                 sleep(1)
             }
         }
     }
     func pause() {
-        print("暂停播放\(printSelf())")
+        print("暂停播放\(printSelf(self))")
         isPlaying = false
-    }
-    
-    private func printSelf() {
-        print("地址为: \(Unmanaged<AnyObject>.passUnretained(self).toOpaque())")
     }
 }
