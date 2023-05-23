@@ -7,12 +7,12 @@
 
 import Foundation
 
-protocol copyable: AnyObject {
+protocol Copyable: AnyObject {
     func copy() -> AnyObject
     func multableCopy() -> AnyObject
 }
 
-class Person: copyable {
+class Person: Copyable {
     let age: Int
     let weight: Int
     let son: Person?

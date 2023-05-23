@@ -26,7 +26,7 @@ class ComparetorModel {
     }
 }
 
-class comparetorA: Comparetor {
+class ComparetorA: Comparetor {
     let model: ComparetorModel = ComparetorModel(1)
     func getResult() -> Int {
         return 100
@@ -39,7 +39,7 @@ class comparetorA: Comparetor {
     }
 }
 
-class comparetorB: Comparetor {
+class ComparetorB: Comparetor {
     let model: ComparetorModel = ComparetorModel(2)
     func getResult() -> Int {
         return 200
@@ -52,7 +52,7 @@ class comparetorB: Comparetor {
     }
 }
 
-class strateryController {
+class StrateryController {
     var com: Comparetor?
     func setComparetor(_ param: Comparetor) {
         com = param
@@ -63,15 +63,15 @@ class strateryController {
     
     init(_ type: ComparetorType) {
         if (type == ComparetorType.A) {
-            com = comparetorA()
+            com = ComparetorA()
         } else if (type == ComparetorType.B) {
-            com = comparetorB()
+            com = ComparetorB()
         }
     }
     
     init() {
-        let a: Comparetor = comparetorA()
-        let b: Comparetor = comparetorB()
+        let a: Comparetor = ComparetorA()
+        let b: Comparetor = ComparetorB()
         arr = [a, b]
     }
     

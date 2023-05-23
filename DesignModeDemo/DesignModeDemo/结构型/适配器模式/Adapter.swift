@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol targetInterface {
+protocol TargetInterface {
     func getResult() -> String
 }
 
-class sourceObject {
+class SourceObject {
     let age: Int
     let weight: Int
     
@@ -25,9 +25,9 @@ class sourceObject {
     }
 }
 
-class adapterObject: targetInterface {
-    var sourceObj: sourceObject?
-    init(_ source: sourceObject) {
+class AdapterObject: TargetInterface {
+    var sourceObj: SourceObject?
+    init(_ source: SourceObject) {
         sourceObj = source
     }
     func getResult() -> String {
