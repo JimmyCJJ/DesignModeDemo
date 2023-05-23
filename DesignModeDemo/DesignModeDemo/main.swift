@@ -31,7 +31,9 @@ func main() {
     // 需求：给一个类扩展新的功能
 //    decoratorMode()
     // 需求：设计一个拦截器，拦截请求并做一些校验后转发给真正的服务器
-    delegateMode()
+//    delegateMode()
+    // 需求：设计一套方便客户端投资的接口
+    appearanceMode()
 }
 
 func getOptionString(_ optional: Optional<Any>) -> String {
@@ -196,4 +198,15 @@ func delegateMode() {
     proxy.perform(#selector(TargetProtocol.sendRequest))
     proxy.perform(#selector(TargetProtocol.sendMsg(_:)), with: "yeah")
     // 实现proxy.invokeBlock就可以回调出来处理方法调用，类似Java动态代理，由于swift不存在NSInvocation *，所以没办法演示
+}
+
+// 外观模式
+// 定义：封装一个复杂系统，让客户端不依赖于子系统，提供方便使用的接口
+// 优点：简化交互方式；解耦合；提高可维护性
+// 缺点：不符合开闭原则；隐藏了潜在问题
+// 应用场景：子系统接口复杂；需要将子系统划分为多个层次；解耦客户端与子系统；复杂的library/跨平台的程序/电商系统等
+func appearanceMode() {
+    let appearance = fundAppearance()
+    appearance.buy()
+    appearance.sell()
 }

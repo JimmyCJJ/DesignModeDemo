@@ -18,6 +18,7 @@
 		BF818A6C2A1BB19C00FBA71C /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF818A6B2A1BB19C00FBA71C /* Singleton.swift */; };
 		BF818A6E2A1BC1A900FBA71C /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF818A6D2A1BC1A900FBA71C /* Builder.swift */; };
 		BF818A722A1D153100FBA71C /* OCProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF818A712A1D153100FBA71C /* OCProxy.m */; };
+		BF818A742A1D1E4400FBA71C /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF818A732A1D1E4400FBA71C /* Appearance.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +49,7 @@
 		BF818A6F2A1D153100FBA71C /* DesignModeDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DesignModeDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		BF818A702A1D153100FBA71C /* OCProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCProxy.h; sourceTree = "<group>"; };
 		BF818A712A1D153100FBA71C /* OCProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCProxy.m; sourceTree = "<group>"; };
+		BF818A732A1D1E4400FBA71C /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		841D3E202A1C4DF70058BFD2 /* 外观模式 */ = {
 			isa = PBXGroup;
 			children = (
+				BF818A732A1D1E4400FBA71C /* Appearance.swift */,
 			);
 			path = "外观模式";
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 				BF818A4E2A1A771900FBA71C /* Factory.swift in Sources */,
 				841D3E302A1C55EF0058BFD2 /* Tool.swift in Sources */,
 				841D3E342A1C62770058BFD2 /* Decorator.swift in Sources */,
+				BF818A742A1D1E4400FBA71C /* Appearance.swift in Sources */,
 				841D3E362A1C67340058BFD2 /* Delegate.swift in Sources */,
 				BF818A462A1A76EF00FBA71C /* main.swift in Sources */,
 				BF818A6E2A1BC1A900FBA71C /* Builder.swift in Sources */,
