@@ -25,7 +25,9 @@ func main() {
     // 需求：封装一个控件，可以设置长宽高等属性
 //    builder()
     // 需求：克隆一个对象，浅克隆/深克隆
-    clone()
+//    clone()
+    // 需求：设计一个适配器，兼容新的接口
+    adapter()
 }
 
 func getOptionString(_ optional: Optional<Any>) -> String {
@@ -136,4 +138,18 @@ func clone() {
     printSelf(mutableCopyObject)
     print("son:")
     printSelf(mutableCopyObject.son)
+}
+
+// 适配器模式
+// 定义：已有接口可能不适用于新的目标接口，这时候可以使用一个适配器对象去利用旧接口实现目标接口，需要三个角色：源对象、目标对象、适配器对象
+// 优点：不需改动已有接口，无影响面；如果不需要新接口了把适配器删掉即可
+// 缺点：由于适配器相当于多封装了一层接口调用，接口实现实际上是由内部的源对象进行，太多的适配器对象可能会让系统更加凌乱
+func adapter() {
+    let source = sourceObject(age: 28, weight: 140)
+    let result1 = source.getResult()
+    print("适配前-\(result1)")
+    
+    let adapter = adapterObject(source)
+    let result2 = adapter.getResult()
+    print("适配后-\(result2)")
 }
