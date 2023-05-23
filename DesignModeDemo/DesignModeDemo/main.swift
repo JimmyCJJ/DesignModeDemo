@@ -30,7 +30,7 @@ func main() {
 //    adapterMode()
     // 需求：给一个类扩展新的功能
 //    decoratorMode()
-    // 需求：把事件代理出去
+    // 需求：设计一个拦截器，拦截请求并做一些校验后转发给真正的服务器
     delegateMode()
 }
 
@@ -169,9 +169,31 @@ func decoratorMode() {
 }
 
 // 代理模式
-// 定义：
-// 优点：
-// 缺点：
+// 定义：被代理者委托代理者完成某些事
+// 优点：可以在不修改原有方法的情况下新增功能，相当于实现AOP
+// 缺点：静态代理由于代理对象需要与被代理对象实现相同的接口，所有会有很多代理类；动态代理比直接调用业务类的方法要慢，因为经过了一层转发
 func delegateMode() {
+    // iOS代理
+    print("-----iOS代理-----")
+    let server = Server()
+    let delegate = DelegateClient(server)
+    let client = Client(delegate)
+    client.sendRequest()
+    client.sendMsg("hello")
+//
+    // Java静态代理
+    print("-----Java静态代理-----")
+    let server1 = Server()
+    let client1 = DelegateClient(server1)
+    client1.sendRequest()
+    client1.sendMsg("你好")
     
+    // Java动态代理
+    print("-----Java动态代理-----")
+    let target = Target()
+    let proxy = OCProxy(target: target)
+    proxy.perform(#selector(Target.print))
+    proxy.perform(#selector(TargetProtocol.sendRequest))
+    proxy.perform(#selector(TargetProtocol.sendMsg(_:)), with: "yeah")
+    // 实现proxy.invokeBlock就可以回调出来处理方法调用，类似Java动态代理，由于swift不存在NSInvocation *，所以没办法演示
 }
