@@ -35,7 +35,9 @@ func main() {
     // 需求：设计一套方便客户端投资的接口
 //    appearanceMode()
     // 需求：设计一个跨平台播放的播放器，平台有iOS，Android，PC，Mac，Linux；支持的视频格式有MP4，AVI，FLV格式
-    bridgeMode()
+//    bridgeMode()
+    // 需求：赋予一个人洗衣服，洗碗，扫地的能力
+    combinationMode()
 }
 
 func getOptionString(_ optional: Optional<Any>) -> String {
@@ -223,4 +225,15 @@ func bridgeMode() {
     Pc(AVIVideo()).openVideo()
     Mac(FLVVideo()).openVideo()
     Linux(FLVVideo()).openVideo()
+}
+
+// 组合模式
+// 定义：可以将类似功能的类组合成一个抽象类，客户端调用抽象类的接口时内部会调用对应功能类的接口
+// 优点：不需要使用继承就可以得到对应的能力，减少层级复杂性，灵活性强
+// 缺点：违反单一职责原则，组合不好容易形成大杂烩的类
+func combinationMode() {
+    let people = People()
+    people.washClothes()
+    people.washDishes()
+    people.sweep()
 }
