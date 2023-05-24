@@ -33,7 +33,9 @@ func main() {
     // 需求：设计一个拦截器，拦截请求并做一些校验后转发给真正的服务器
 //    delegateMode()
     // 需求：设计一套方便客户端投资的接口
-    appearanceMode()
+//    appearanceMode()
+    // 需求：设计一个跨平台播放的播放器，平台有iOS，Android，PC，Mac，Linux；支持的视频格式有MP4，AVI，FLV格式
+    bridgeMode()
 }
 
 func getOptionString(_ optional: Optional<Any>) -> String {
@@ -209,4 +211,16 @@ func appearanceMode() {
     let appearance = fundAppearance()
     appearance.buy()
     appearance.sell()
+}
+
+// 桥接模式
+// 定义：分离抽象与实现，使相关联的类可以独立变化，独立扩展
+// 优点：拓展性强，遵守开闭原则
+// 缺点：要分清哪些部分可以独立变化
+func bridgeMode() {
+    Android(Mp4Video()).openVideo()
+    Ios(FLVVideo()).openVideo()
+    Pc(AVIVideo()).openVideo()
+    Mac(FLVVideo()).openVideo()
+    Linux(FLVVideo()).openVideo()
 }

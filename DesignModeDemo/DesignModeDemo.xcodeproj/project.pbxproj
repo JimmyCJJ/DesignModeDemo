@@ -12,6 +12,7 @@
 		841D3E322A1C5A700058BFD2 /* Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D3E312A1C5A700058BFD2 /* Adapter.swift */; };
 		841D3E342A1C62770058BFD2 /* Decorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D3E332A1C62770058BFD2 /* Decorator.swift */; };
 		841D3E362A1C67340058BFD2 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D3E352A1C67340058BFD2 /* Delegate.swift */; };
+		841D3E472A1DE4410058BFD2 /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D3E462A1DE4410058BFD2 /* Bridge.swift */; };
 		BF818A462A1A76EF00FBA71C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF818A452A1A76EF00FBA71C /* main.swift */; };
 		BF818A4E2A1A771900FBA71C /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF818A4D2A1A771900FBA71C /* Factory.swift */; };
 		BF818A522A1B366900FBA71C /* Stratery.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF818A512A1B366900FBA71C /* Stratery.swift */; };
@@ -39,6 +40,7 @@
 		841D3E312A1C5A700058BFD2 /* Adapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adapter.swift; sourceTree = "<group>"; };
 		841D3E332A1C62770058BFD2 /* Decorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decorator.swift; sourceTree = "<group>"; };
 		841D3E352A1C67340058BFD2 /* Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
+		841D3E462A1DE4410058BFD2 /* Bridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bridge.swift; sourceTree = "<group>"; };
 		BF818A422A1A76EF00FBA71C /* DesignModeDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DesignModeDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF818A452A1A76EF00FBA71C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		BF818A4D2A1A771900FBA71C /* Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		841D3E1F2A1C4DF00058BFD2 /* 桥接模式 */ = {
 			isa = PBXGroup;
 			children = (
+				841D3E462A1DE4410058BFD2 /* Bridge.swift */,
 			);
 			path = "桥接模式";
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				841D3E302A1C55EF0058BFD2 /* Tool.swift in Sources */,
 				841D3E342A1C62770058BFD2 /* Decorator.swift in Sources */,
 				BF818A742A1D1E4400FBA71C /* Appearance.swift in Sources */,
+				841D3E472A1DE4410058BFD2 /* Bridge.swift in Sources */,
 				841D3E362A1C67340058BFD2 /* Delegate.swift in Sources */,
 				BF818A462A1A76EF00FBA71C /* main.swift in Sources */,
 				BF818A6E2A1BC1A900FBA71C /* Builder.swift in Sources */,
@@ -496,7 +500,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 938733SPBR;
+				DEVELOPMENT_TEAM = AU8Z349CPJ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -516,7 +520,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 938733SPBR;
+				DEVELOPMENT_TEAM = AU8Z349CPJ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
