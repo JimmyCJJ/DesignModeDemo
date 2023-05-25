@@ -39,7 +39,9 @@ func main() {
     // 需求：赋予一个人洗衣服，洗碗，扫地的能力
 //    combinationMode()
     // 需求：设计一个字符串对象池，使传入相同的字符串返回的是同一个对象
-    flyweightMode()
+//    flyweightMode()
+    // 需求：用代码实现男生和女生一天的行程
+    templateMethodMode()
 }
 
 func getOptionString(_ optional: Optional<Any>) -> String {
@@ -256,4 +258,21 @@ func flyweightMode() {
     
     printSelf(obj3)
     print(obj3.str)
+}
+
+// 模板方法模式
+// 定义：父类定义一套标准流程的算法，子类按需覆盖方法去执行不同的操作，简单来说就是把重复代码上升到父类，子类可以覆盖任意一个步骤实现差异化
+// 优点：
+//  1、利用模板方法将相同处理逻辑的代码放到抽象父类中，可以提高代码的复用性
+//  2、将不同的代码不同的子类中，通过对子类的扩展增加新的行为，提高代码的扩展性
+//  3、把不变的行为写在父类上，去除子类的重复代码，提供了一个很好的代码复用平台，符合开闭原则
+// 缺点：
+//  1、类数目的增加，每一个抽象类都需要一个或以上子类来实现，这样导致类的个数增加
+//  2、类数量的增加，简介地增加了系统实现的复杂度
+//  3、继承关系自身缺点，如果父类添加新的抽象方法，所有子类都要改一遍
+func templateMethodMode() {
+    let boy = Boy()
+    boy.beginOneDay()
+    let girl = Girl()
+    girl.beginOneDay()
 }
