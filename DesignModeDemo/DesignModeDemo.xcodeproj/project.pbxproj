@@ -14,6 +14,7 @@
 		841D3E362A1C67340058BFD2 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D3E352A1C67340058BFD2 /* Delegate.swift */; };
 		841D3E472A1DE4410058BFD2 /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D3E462A1DE4410058BFD2 /* Bridge.swift */; };
 		841D3E4B2A1DF6130058BFD2 /* Combination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D3E4A2A1DF6090058BFD2 /* Combination.swift */; };
+		841D3E522A1DFA640058BFD2 /* Flyweight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D3E512A1DFA640058BFD2 /* Flyweight.swift */; };
 		BF818A462A1A76EF00FBA71C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF818A452A1A76EF00FBA71C /* main.swift */; };
 		BF818A4E2A1A771900FBA71C /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF818A4D2A1A771900FBA71C /* Factory.swift */; };
 		BF818A522A1B366900FBA71C /* Stratery.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF818A512A1B366900FBA71C /* Stratery.swift */; };
@@ -43,6 +44,7 @@
 		841D3E352A1C67340058BFD2 /* Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
 		841D3E462A1DE4410058BFD2 /* Bridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bridge.swift; sourceTree = "<group>"; };
 		841D3E4A2A1DF6090058BFD2 /* Combination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Combination.swift; sourceTree = "<group>"; };
+		841D3E512A1DFA640058BFD2 /* Flyweight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flyweight.swift; sourceTree = "<group>"; };
 		BF818A422A1A76EF00FBA71C /* DesignModeDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DesignModeDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF818A452A1A76EF00FBA71C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		BF818A4D2A1A771900FBA71C /* Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 		841D3E1D2A1C4DD40058BFD2 /* 享元模式 */ = {
 			isa = PBXGroup;
 			children = (
+				841D3E512A1DFA640058BFD2 /* Flyweight.swift */,
 			);
 			path = "享元模式";
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF818A522A1B366900FBA71C /* Stratery.swift in Sources */,
+				841D3E522A1DFA640058BFD2 /* Flyweight.swift in Sources */,
 				BF818A722A1D153100FBA71C /* OCProxy.m in Sources */,
 				841D3E322A1C5A700058BFD2 /* Adapter.swift in Sources */,
 				BF818A6C2A1BB19C00FBA71C /* Singleton.swift in Sources */,

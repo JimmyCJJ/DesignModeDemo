@@ -37,7 +37,9 @@ func main() {
     // 需求：设计一个跨平台播放的播放器，平台有iOS，Android，PC，Mac，Linux；支持的视频格式有MP4，AVI，FLV格式
 //    bridgeMode()
     // 需求：赋予一个人洗衣服，洗碗，扫地的能力
-    combinationMode()
+//    combinationMode()
+    // 需求：设计一个字符串对象池，使传入相同的字符串返回的是同一个对象
+    flyweightMode()
 }
 
 func getOptionString(_ optional: Optional<Any>) -> String {
@@ -236,4 +238,22 @@ func combinationMode() {
     people.washClothes()
     people.washDishes()
     people.sweep()
+}
+
+// 享元模式
+// 定义：如果一个对象可以把内在变量和外在变量分开，那么就可以创造一个对象池，来保存相同的对象
+// 优点：节省内存，可以避免创建重复对象，两个内在一样的对象可以通过外在变量而有不同的表现
+// 缺点：性能方面会有所消耗，因为设计到哈希表的存储、查询等操作；如果对象的状态会变化也是不适合使用
+func flyweightMode() {
+    let obj1 = StringObj.createObj(str: "1")
+    let obj2 = StringObj.createObj(str: "1")
+    let obj3 = StringObj.createObj(str: "2")
+    printSelf(obj1)
+    print(obj1.str)
+    
+    printSelf(obj2)
+    print(obj2.str)
+    
+    printSelf(obj3)
+    print(obj3.str)
 }
