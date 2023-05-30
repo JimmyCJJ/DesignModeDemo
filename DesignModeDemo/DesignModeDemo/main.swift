@@ -41,7 +41,9 @@ func main() {
     // 需求：设计一个字符串对象池，使传入相同的字符串返回的是同一个对象
 //    flyweightMode()
     // 需求：用代码实现男生和女生一天的行程
-    templateMethodMode()
+//    templateMethodMode()
+    // 需求：观察某个对象的变量的变化 / 实现一个发布/订阅机制
+    observerMode()
 }
 
 func getOptionString(_ optional: Optional<Any>) -> String {
@@ -275,4 +277,60 @@ func templateMethodMode() {
     boy.beginOneDay()
     let girl = Girl()
     girl.beginOneDay()
+}
+
+// 观察者模式
+// 定义：观察者模式是一种行为型设计模式，它定义了一种一对多的依赖关系，让多个观察者对象同时监听某一个主题对象，当主题对象的状态发生变化时，它会通知所有观察者对象，使它们能够自动更新自己。
+
+// 优点：
+// 1、实现了对象之间的抽象耦合，增加了灵活性和可扩展性。
+// 2、支持广播通信，可以实现多对多的交互。
+// 缺点：
+// 1、如果观察者数量过多或者处理时间过长，会影响主题对象的状态更新和通知效率。
+// 2、如果观察者之间有依赖关系，可能会导致循环调用或者不一致的状态。
+// 适用场景：
+// 1、当一个对象的状态变化需要通知其他对象，并且这些对象之间是松散耦合的时候。
+// 2、当需要支持广播通信的场景，例如GUI事件处理，订阅者可以根据自己的需要订阅不同的事件，例如按钮点击，鼠标移动等。
+// 例如，一个电商网站的订单系统，当用户下单时，可以通知库存系统，物流系统，支付系统等不同的观察者进行相应的处理。
+
+
+// 发布订阅模式
+// 定义：发布订阅模式是一种消息型设计模式，它定义了一个调度中心，称为发布者或者代理，它维护了一个订阅者列表，当有新的消息时，它会遍历这个列表，将消息发送给所有订阅者。
+// 优点：
+// 1、实现了对象之间的完全解耦，发布者和订阅者不需要知道对方的存在和细节。
+// 2、支持异步通信，发布者可以将消息发送到消息队列或者中间件，订阅者可以在合适的时机接收和处理消息。
+// 缺点：
+// 1、增加了系统的复杂度和开销，需要实现和维护一个稳定的调度中心。
+// 2、可能会导致消息的延迟或者丢失，需要考虑消息的可靠性和一致性。
+// 适用场景：
+// 1、当一个对象的状态变化需要通知多个对象，并且这些对象之间是完全解耦的时候。
+// 2、当需要支持异步通信的场景，例如分布式系统，微服务架构，事件驱动系统等。
+// 例如，一个新闻网站的推送系统，当有新的新闻发布时，可以将新闻内容发送到一个消息中心，订阅者可以根据自己的兴趣和偏好订阅不同的主题，例如体育，娱乐，科技等。
+
+func observerMode() {
+    // 观察者模式 本例写死监听status，可以改造为监听指定变量
+    let son = Son()
+    let father = Father()
+    let mother = Mother()
+    son.addObserver(father)
+    son.addObserver(mother)
+    son.changeStatus(SonStatus.sad)
+    
+    son.removeObserver(mother)
+    son.changeStatus(SonStatus.smile)
+    
+    son.addObserver(mother)
+    son.removeObserver(father)
+    son.changeStatus(SonStatus.happy)
+    
+    // 发布订阅模式
+    let platform = BookPlatformer()
+    let publisher = Publisher()
+    
+    let subscriber1 = Subscriber()
+    let subscriber2 = Subscriber()
+    
+    platform.registerSubscribe(subscriber1)
+    platform.registerSubscribe(subscriber2)
+    publisher.postMessage(platform, "发布了新书-三国演义")
 }

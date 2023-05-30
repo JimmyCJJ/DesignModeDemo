@@ -23,6 +23,7 @@
 		BF818A722A1D153100FBA71C /* OCProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF818A712A1D153100FBA71C /* OCProxy.m */; };
 		BF818A742A1D1E4400FBA71C /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF818A732A1D1E4400FBA71C /* Appearance.swift */; };
 		BF818A782A1FC73300FBA71C /* TemplateMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF818A772A1FC73300FBA71C /* TemplateMethod.swift */; };
+		BF818A7A2A20FEB100FBA71C /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF818A792A20FEB100FBA71C /* Observer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,6 +59,7 @@
 		BF818A712A1D153100FBA71C /* OCProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCProxy.m; sourceTree = "<group>"; };
 		BF818A732A1D1E4400FBA71C /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		BF818A772A1FC73300FBA71C /* TemplateMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateMethod.swift; sourceTree = "<group>"; };
+		BF818A792A20FEB100FBA71C /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +231,7 @@
 		841D3E2D2A1C4E8E0058BFD2 /* 观察者模式 */ = {
 			isa = PBXGroup;
 			children = (
+				BF818A792A20FEB100FBA71C /* Observer.swift */,
 			);
 			path = "观察者模式";
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				841D3E322A1C5A700058BFD2 /* Adapter.swift in Sources */,
 				BF818A6C2A1BB19C00FBA71C /* Singleton.swift in Sources */,
 				BF818A4E2A1A771900FBA71C /* Factory.swift in Sources */,
+				BF818A7A2A20FEB100FBA71C /* Observer.swift in Sources */,
 				841D3E302A1C55EF0058BFD2 /* Tool.swift in Sources */,
 				841D3E342A1C62770058BFD2 /* Decorator.swift in Sources */,
 				BF818A742A1D1E4400FBA71C /* Appearance.swift in Sources */,
