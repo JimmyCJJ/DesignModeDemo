@@ -43,7 +43,9 @@ func main() {
     // 需求：用代码实现男生和女生一天的行程
 //    templateMethodMode()
     // 需求：观察某个对象的变量的变化 / 实现一个发布/订阅机制
-    observerMode()
+//    observerMode()
+    // 需求：设计一个遍历各种容器的迭代器
+    interatorMode()
 }
 
 func getOptionString(_ optional: Optional<Any>) -> String {
@@ -333,4 +335,20 @@ func observerMode() {
     platform.registerSubscribe(subscriber1)
     platform.registerSubscribe(subscriber2)
     publisher.postMessage(platform, "发布了新书-三国演义")
+}
+
+// 迭代子（器）模式
+// 定义：提供一种方法，以指定策略的顺序访问集合对象中的各个元素，而不暴露该对象的内部表示
+// 优点：分离了集合对象的遍历行为;抽象出了迭代器负责集合对象的遍历，可以让外部的代码透明的访问集合内部的数据
+// 缺点：类的个数成对增加;迭代器模式将存储数据和遍历数据两个职责拆分;如果新添加一个集合类，需要增加该集合类对应的迭代器类，类的个数成对增加在一定程度上增加了系统复杂性
+func interatorMode() {
+    let arr = OneArray(array: ["1", "2", "4", "3"])
+    Interator.traverse(arr) { element in
+        print(element)
+    }
+    
+    let dic = OneDictionary(dictionary: ["a":1,"b":2,"c":4,"d":3])
+    Interator.traverse(dic) { element in
+        print(element)
+    }
 }
