@@ -16,6 +16,13 @@
 		841D3E4B2A1DF6130058BFD2 /* Combination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D3E4A2A1DF6090058BFD2 /* Combination.swift */; };
 		841D3E522A1DFA640058BFD2 /* Flyweight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D3E512A1DFA640058BFD2 /* Flyweight.swift */; };
 		8433970E2A26DB180037FEF5 /* Iterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433970D2A26DB180037FEF5 /* Iterator.swift */; };
+		84CBAFA32A28294200F70B9D /* ChainOfResponsibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBAFA22A28294200F70B9D /* ChainOfResponsibility.swift */; };
+		84CBAFA52A28294F00F70B9D /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBAFA42A28294F00F70B9D /* Command.swift */; };
+		84CBAFA72A28295B00F70B9D /* Memorandum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBAFA62A28295B00F70B9D /* Memorandum.swift */; };
+		84CBAFA92A28296600F70B9D /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBAFA82A28296600F70B9D /* Status.swift */; };
+		84CBAFAB2A28296F00F70B9D /* Visitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBAFAA2A28296F00F70B9D /* Visitor.swift */; };
+		84CBAFAD2A28297900F70B9D /* Mediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBAFAC2A28297900F70B9D /* Mediator.swift */; };
+		84CBAFB12A28298B00F70B9D /* Interpreter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBAFB02A28298B00F70B9D /* Interpreter.swift */; };
 		BF818A462A1A76EF00FBA71C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF818A452A1A76EF00FBA71C /* main.swift */; };
 		BF818A4E2A1A771900FBA71C /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF818A4D2A1A771900FBA71C /* Factory.swift */; };
 		BF818A522A1B366900FBA71C /* Stratery.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF818A512A1B366900FBA71C /* Stratery.swift */; };
@@ -49,6 +56,13 @@
 		841D3E4A2A1DF6090058BFD2 /* Combination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Combination.swift; sourceTree = "<group>"; };
 		841D3E512A1DFA640058BFD2 /* Flyweight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flyweight.swift; sourceTree = "<group>"; };
 		8433970D2A26DB180037FEF5 /* Iterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Iterator.swift; sourceTree = "<group>"; };
+		84CBAFA22A28294200F70B9D /* ChainOfResponsibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainOfResponsibility.swift; sourceTree = "<group>"; };
+		84CBAFA42A28294F00F70B9D /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		84CBAFA62A28295B00F70B9D /* Memorandum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memorandum.swift; sourceTree = "<group>"; };
+		84CBAFA82A28296600F70B9D /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		84CBAFAA2A28296F00F70B9D /* Visitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visitor.swift; sourceTree = "<group>"; };
+		84CBAFAC2A28297900F70B9D /* Mediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mediator.swift; sourceTree = "<group>"; };
+		84CBAFB02A28298B00F70B9D /* Interpreter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interpreter.swift; sourceTree = "<group>"; };
 		BF818A422A1A76EF00FBA71C /* DesignModeDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DesignModeDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF818A452A1A76EF00FBA71C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		BF818A4D2A1A771900FBA71C /* Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
@@ -177,6 +191,7 @@
 		841D3E252A1C4E620058BFD2 /* 解释器模式 */ = {
 			isa = PBXGroup;
 			children = (
+				84CBAFB02A28298B00F70B9D /* Interpreter.swift */,
 			);
 			path = "解释器模式";
 			sourceTree = "<group>";
@@ -184,6 +199,7 @@
 		841D3E262A1C4E670058BFD2 /* 中介者模式 */ = {
 			isa = PBXGroup;
 			children = (
+				84CBAFAC2A28297900F70B9D /* Mediator.swift */,
 			);
 			path = "中介者模式";
 			sourceTree = "<group>";
@@ -191,6 +207,7 @@
 		841D3E272A1C4E700058BFD2 /* 访问者模式 */ = {
 			isa = PBXGroup;
 			children = (
+				84CBAFAA2A28296F00F70B9D /* Visitor.swift */,
 			);
 			path = "访问者模式";
 			sourceTree = "<group>";
@@ -198,6 +215,7 @@
 		841D3E282A1C4E770058BFD2 /* 状态模式 */ = {
 			isa = PBXGroup;
 			children = (
+				84CBAFA82A28296600F70B9D /* Status.swift */,
 			);
 			path = "状态模式";
 			sourceTree = "<group>";
@@ -205,6 +223,7 @@
 		841D3E292A1C4E7B0058BFD2 /* 备忘录模式 */ = {
 			isa = PBXGroup;
 			children = (
+				84CBAFA62A28295B00F70B9D /* Memorandum.swift */,
 			);
 			path = "备忘录模式";
 			sourceTree = "<group>";
@@ -212,6 +231,7 @@
 		841D3E2A2A1C4E800058BFD2 /* 命令模式 */ = {
 			isa = PBXGroup;
 			children = (
+				84CBAFA42A28294F00F70B9D /* Command.swift */,
 			);
 			path = "命令模式";
 			sourceTree = "<group>";
@@ -219,6 +239,7 @@
 		841D3E2B2A1C4E840058BFD2 /* 责任链模式 */ = {
 			isa = PBXGroup;
 			children = (
+				84CBAFA22A28294200F70B9D /* ChainOfResponsibility.swift */,
 			);
 			path = "责任链模式";
 			sourceTree = "<group>";
@@ -381,8 +402,11 @@
 				BF818A522A1B366900FBA71C /* Stratery.swift in Sources */,
 				841D3E522A1DFA640058BFD2 /* Flyweight.swift in Sources */,
 				BF818A722A1D153100FBA71C /* OCProxy.m in Sources */,
+				84CBAFA52A28294F00F70B9D /* Command.swift in Sources */,
 				841D3E322A1C5A700058BFD2 /* Adapter.swift in Sources */,
 				BF818A6C2A1BB19C00FBA71C /* Singleton.swift in Sources */,
+				84CBAFAD2A28297900F70B9D /* Mediator.swift in Sources */,
+				84CBAFAB2A28296F00F70B9D /* Visitor.swift in Sources */,
 				BF818A4E2A1A771900FBA71C /* Factory.swift in Sources */,
 				BF818A7A2A20FEB100FBA71C /* Observer.swift in Sources */,
 				841D3E302A1C55EF0058BFD2 /* Tool.swift in Sources */,
@@ -390,8 +414,12 @@
 				BF818A742A1D1E4400FBA71C /* Appearance.swift in Sources */,
 				841D3E472A1DE4410058BFD2 /* Bridge.swift in Sources */,
 				841D3E362A1C67340058BFD2 /* Delegate.swift in Sources */,
+				84CBAFA32A28294200F70B9D /* ChainOfResponsibility.swift in Sources */,
 				BF818A462A1A76EF00FBA71C /* main.swift in Sources */,
+				84CBAFA92A28296600F70B9D /* Status.swift in Sources */,
 				BF818A782A1FC73300FBA71C /* TemplateMethod.swift in Sources */,
+				84CBAFB12A28298B00F70B9D /* Interpreter.swift in Sources */,
+				84CBAFA72A28295B00F70B9D /* Memorandum.swift in Sources */,
 				BF818A6E2A1BC1A900FBA71C /* Builder.swift in Sources */,
 				8433970E2A26DB180037FEF5 /* Iterator.swift in Sources */,
 				841D3E1B2A1C4D770058BFD2 /* Clone.swift in Sources */,

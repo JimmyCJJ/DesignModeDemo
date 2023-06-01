@@ -45,7 +45,14 @@ func main() {
     // 需求：观察某个对象的变量的变化 / 实现一个发布/订阅机制
 //    observerMode()
     // 需求：设计一个遍历各种容器的迭代器
-    interatorMode()
+//    interatorMode()
+    chainOfResponsibilityMode()
+//    commandMode()
+//    memorandumMode()
+//    statusMode()
+//    visitorMode()
+//    mediatorMode()
+//    interpreterMode()
 }
 
 func getOptionString(_ optional: Optional<Any>) -> String {
@@ -351,4 +358,60 @@ func interatorMode() {
     Interator.traverse(dic) { element in
         print(element)
     }
+}
+
+// 责任链模式
+// 定义：
+// 优点：
+// 缺点：
+func chainOfResponsibilityMode() {
+    
+}
+
+// 命令模式
+// 定义：
+// 优点：
+// 缺点：
+func commandMode() {
+    
+}
+
+// 备忘录模式
+// 定义：
+// 优点：
+// 缺点：
+func memorandumMode() {
+    
+}
+
+// 状态模式
+// 定义：
+// 优点：
+// 缺点：
+func statusMode() {
+    
+}
+
+// 访问者模式
+// 定义：
+// 优点：
+// 缺点：
+func visitorMode() {
+    
+}
+
+// 中介者模式
+// 定义：
+// 优点：
+// 缺点：
+func mediatorMode() {
+    
+}
+
+// 解释器模式
+// 定义：
+// 优点：
+// 缺点：
+func interpreterMode() {
+    
 }
