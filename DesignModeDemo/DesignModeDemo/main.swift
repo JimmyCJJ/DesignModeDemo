@@ -48,9 +48,10 @@ func main() {
 //    interatorMode()
     // 需求：设计一条任务执行链
 //    chainOfResponsibilityMode()
-    // 封装请求
-    commandMode()
-//    memorandumMode()
+    // 需求：封装请求
+//    commandMode()
+    // 需求：设计一个备忘录
+    memorandumMode()
 //    statusMode()
 //    visitorMode()
 //    mediatorMode()
@@ -404,11 +405,25 @@ func commandMode() {
 }
 
 // 备忘录模式
-// 定义：
+// 定义：保存一个对象的某个状态，以便在适当的时候恢复对象。（后悔药模式）
 // 优点：
-// 缺点：
+// 1.实现了信息的封装，使得用户不需要关心状态的保存细节。
+// 2.给用户提供了一种可以恢复状态的机制，可以使用户能够比较方便地回到某个历史的状态
+// 缺点：如果成员变量过多或者快照过多，会占用比较大的资源。
 func memorandumMode() {
-    
+    let originator = Originator()
+    originator.setState("A")
+    originator.printState()
+    print("修改")
+    let caretaker = Caretaker(memento: originator.createMemento())
+    originator.setState("B")
+    originator.printState()
+    print("修改")
+    originator.setState("C")
+    originator.printState()
+    print("撤销")
+    originator.restoreMemento(caretaker.getMemento())
+    originator.printState()
 }
 
 // 状态模式
