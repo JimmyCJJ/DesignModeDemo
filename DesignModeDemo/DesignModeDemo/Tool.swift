@@ -10,6 +10,7 @@ import Foundation
 public func printSelf(_ object: AnyObject?) {
     if (object == nil) {
         print("对象为空")
+        return
     }
     print("地址为: \(Unmanaged<AnyObject>.passUnretained(object!).toOpaque())")
 }
