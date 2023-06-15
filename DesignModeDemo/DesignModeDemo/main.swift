@@ -51,8 +51,9 @@ func main() {
     // 需求：封装请求
 //    commandMode()
     // 需求：设计一个备忘录
-    memorandumMode()
-//    statusMode()
+//    memorandumMode()
+    // 需求：实现一个播放器的状态流转
+    statusMode()
 //    visitorMode()
 //    mediatorMode()
 //    interpreterMode()
@@ -426,12 +427,44 @@ func memorandumMode() {
     originator.printState()
 }
 
-// 状态模式
-// 定义：
+// 状态模式&状态机
+// 定义：主要用来解决对象在多种状态转换时，需要对外输出不同的行为的问题。状态和行为是一一对应的，状态之间可以相互转换。而状态机是状态模式的一种典型的使用例子，这里只讨论有限状态机。状态机有3个组成部分：状态（State）、事件（Event）、动作（Action）。其中，事件也称为转移条件（Transition Condition）。事件触发状态的转移及动作的执行。不过，动作不是必须的，也可能只转移状态，不执行任何动作。实现状态机的方法有多种，比较常用的有分支逻辑法、查表法、状态模式。
 // 优点：
-// 缺点：
+// 1.可以将不同的状态隔离;每个状态都是一个单独的类。
+// 2.可以将各种状态的转换逻辑，分布到状态的子类中，减少相互依赖。
+// 3.增加新状态，操作简单。
+// 缺点：如果状态数量比较多，状态类的数量会增加，业务场景系统变得很复杂；如果业务中某个对象由几十上百个状态，就会很复杂，这时就需要对状态进行拆分处理。
+// 适用场景：一个对象存在多个状态；状态可以相互转换；不同状态下行为不同。
 func statusMode() {
+    // 1.分支逻辑法
+    print("--分支逻辑法--")
+    let action1 = MusicAction1(player: MusicPlayer1())
+    action1.playOrPauseAction()
+    action1.playOrPauseAction()
+    action1.playOrPauseAction()
+    action1.stopAction()
+    action1.playOrPauseAction()
+    action1.stopAction()
     
+    // 2.查表法
+    print("--查表法--")
+    let action2 = MusicAction2(player: MusicPlayer2())
+    action2.playOrPauseAction()
+    action2.playOrPauseAction()
+    action2.playOrPauseAction()
+    action2.stopAction()
+    action2.playOrPauseAction()
+    action2.stopAction()
+    
+    // 3.状态模式
+    print("--状态模式--")
+    let action3 = MusicAction3(player: MusicPlayer3())
+    action3.playOrPauseAction()
+    action3.playOrPauseAction()
+    action3.playOrPauseAction()
+    action3.stopAction()
+    action3.playOrPauseAction()
+    action3.stopAction()
 }
 
 // 访问者模式
