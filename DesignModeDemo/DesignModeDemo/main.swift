@@ -57,8 +57,9 @@ func main() {
     // 需求：手机系统软件升级推送包的实现
 //    visitorMode()
     // 需求：设计一个Router路由，管理业务模块之间的跳转
-    mediatorMode()
-//    interpreterMode()
+//    mediatorMode()
+    // 需求：设计一个[数字(0-9)-小写字母(a-g)-大写字母(A-G)]组成的解释器
+    interpreterMode()
 }
 
 func getOptionString(_ optional: Optional<Any>) -> String {
@@ -519,9 +520,25 @@ func mediatorMode() {
 }
 
 // 解释器模式
-// 定义：
+// 定义：给定一个语言，定义它的文法的一种表示，并定义一个解释器，这个解释器使用该表示来解释语言中的句子。
 // 优点：
+// 1.易于改变和拓展语法。
+// 2.易于实现语法。
+// 3.增加了新的解释表达式的方式。
 // 缺点：
+// 1.对于复杂语法难以维护。
+// 2.执行效率低。
+// 3.应用场景很有限。
+// 适用场景
+// 1.可以将一个需要解释执行的语言中的句子表示为一个抽象语法树。
+// 2.一些重复出现的问题可以用一种简单的语言来进行表达。
+// 3.语法比较简单
+// 4.效率不是关键问题
 func interpreterMode() {
-    
+    InterpreterContext("1-a-G").explain() ? print("格式正确") : print("格式错误")
+    InterpreterContext("11-a-G").explain() ? print("格式正确") : print("格式错误")
+    InterpreterContext("9-A-G").explain() ? print("格式正确") : print("格式错误")
+    InterpreterContext("9-f-A").explain() ? print("格式正确") : print("格式错误")
+    InterpreterContext("2-c-B").explain() ? print("格式正确") : print("格式错误")
+    InterpreterContext("B-2-c").explain() ? print("格式正确") : print("格式错误")
 }
