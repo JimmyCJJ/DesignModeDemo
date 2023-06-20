@@ -55,8 +55,9 @@ func main() {
     // 需求：实现一个播放器的状态流转
 //    statusMode()
     // 需求：手机系统软件升级推送包的实现
-    visitorMode()
-//    mediatorMode()
+//    visitorMode()
+    // 需求：设计一个Router路由，管理业务模块之间的跳转
+    mediatorMode()
 //    interpreterMode()
 }
 
@@ -493,11 +494,28 @@ func visitorMode() {
 }
 
 // 中介者模式
-// 定义：
+// 定义：用来降低多个对象和类之间的通信复杂性。这种模式提供了一个中介类，该类通常处理不同类之间的通信，并支持松耦合，使代码易于维护。
 // 优点：
+// 1.降低了类的复杂度，将一对多转化成了一对一。
+// 2.各个类之间的解耦。
+// 3.符合迪米特原则。
 // 缺点：
+// 1.当管理的类太多时，中介者的职责将很大，它会变得复杂而庞大，以至于系统难以维护。
+// 2.中介者承担了较多的责任，一旦中介者出现了问题，整个系统就会受到影响
+// 使用场景：
+// 1.系统中对象之间存在比较复杂的引用关系，导致它们之间的依赖关系结构混乱而且难以复用该对象。
+// 2.想通过一个中间类来封装多个类中的行为，而又不想生成太多的子类。
 func mediatorMode() {
-    
+    let mediator = Mediator()
+    let user = UserModule(mediator)
+    let goods = GoodsModule(mediator)
+    let shopCar = ShopCarModule(mediator)
+    print("注册了\(user)")
+    print("注册了\(goods)")
+    print("注册了\(shopCar)")
+    mediator.routerToModule("ShopCarModule")
+    mediator.routerToModule("UserModule")
+    mediator.routerToModule("GoodsModule")
 }
 
 // 解释器模式
